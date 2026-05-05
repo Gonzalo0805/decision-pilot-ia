@@ -1,22 +1,22 @@
 function construirPrompt(caso, contexto, decision, datos, restricciones) {
-return `
-Actúa como consultor experto en decisiones estratégicas con IA.
+return `Actúa como consultor experto en toma de decisiones estratégicas con IA.
 
 Tu objetivo NO es decidir automáticamente, sino estructurar una recomendación razonada.
 
-CASO: ${caso}
+CASO:
+${caso || "No especificado"}
 
 CONTEXTO:
-${contexto}
+${contexto || "No proporcionado"}
 
 DECISIÓN A TOMAR:
-${decision}
+${decision || "No especificada"}
 
 DATOS DISPONIBLES:
-${datos}
+${datos || "No proporcionados"}
 
 RESTRICCIONES:
-${restricciones}
+${restricciones || "No especificadas"}
 
 Responde obligatoriamente con esta estructura:
 
@@ -24,7 +24,7 @@ Responde obligatoriamente con esta estructura:
 2. Decisión real a tomar
 3. Datos faltantes críticos
 4. Tres alternativas viables
-5. Comparación de alternativas (pros/contras)
+5. Comparación de alternativas (pros y contras)
 6. Recomendación razonada
 7. Qué automatizar vs qué mantener bajo control humano
 8. KPIs para medir éxito
@@ -33,8 +33,7 @@ Responde obligatoriamente con esta estructura:
 Reglas:
 
 * No des una respuesta superficial
-* Justifica siempre
-* Si faltan datos, dilo antes de recomendar
-  `;
+* Justifica siempre tus decisiones
+* Si faltan datos, indícalo antes de recomendar`;
   }
 
