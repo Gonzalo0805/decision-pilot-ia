@@ -1,37 +1,40 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 
-<html lang="es"> 
-  <head>
-    <meta charset="UTF-8"> 
-    <title>Decision Pilot IA</title> 
-    <link rel="stylesheet" href="style.css"> 
-  </head> <body> <h1>Decision Pilot IA</h1> 
-    <p>Herramienta para estructurar decisiones con IA</p> 
-    <label>Selecciona un caso:</label> <select id="caso"> 
-      <option value="admision">Admisión universitaria</option> 
-      <option value="soporte">Soporte TI</option> 
-      <option value="ecommerce">E-commerce</option> 
-      <option value="documentacion">Documentación interna</option> 
-    </select> <h3>Contexto</h3> 
-    <textarea id="contexto"></textarea> 
-    <h3>Decisión a tomar</h3> 
-    <textarea id="decision"></textarea> 
-    <h3>Datos disponibles</h3> 
-    <textarea id="datos">
-      
-    </textarea> <h3>Restricciones</h3> 
-    <textarea id="restricciones"></textarea>
-    <br><br> 
-    <button onclick="generarPrompt()">Generar Prompt</button> 
-    <button onclick="copiarPrompt()">Copiar Prompt</button> 
-    <h3>Resultado:</h3> <pre id="resultado"></pre> 
-    <script src="prompts.js">
-      
-    </script> <script src="app.js">
-      
-    </script> <script src="app.js">
-      
-    </script> </body> </html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Decision Pilot IA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-</body> 
+  <h1>Decision Pilot IA</h1>
+  <p>Herramienta para estructurar decisiones con IA</p>
+
+<label>Selecciona un caso:</label> <select id="caso"> <option value="admision">Admisión universitaria</option> <option value="soporte">Soporte TI</option> <option value="ecommerce">E-commerce</option> <option value="documentacion">Documentación interna</option> </select>
+
+  <h3>Contexto</h3>
+  <textarea id="contexto"></textarea>
+
+  <h3>Decisión a tomar</h3>
+  <textarea id="decision"></textarea>
+
+  <h3>Datos disponibles</h3>
+  <textarea id="datos"></textarea>
+
+  <h3>Restricciones</h3>
+  <textarea id="restricciones"></textarea>
+
+<br><br>
+
+<button onclick="generarPrompt()">Generar Prompt</button> <button onclick="copiarPrompt()">Copiar Prompt</button>
+
+  <h3>Resultado:</h3>
+  <pre id="resultado"></pre>
+
+  <script src="prompts.js"></script>
+
+  <script src="app.js"></script>
+
+</body>
 </html>
