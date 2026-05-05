@@ -42,4 +42,3 @@ Publicado con GitHub Pages
 ## Autores
 
 Equipo de estudiantes
-
