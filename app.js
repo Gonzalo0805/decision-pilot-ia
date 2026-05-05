@@ -43,7 +43,23 @@ navigator.clipboard.writeText(texto)
 
 window.onload = function () {
 
-let casosData = [];
+let casosData = [
+{
+id: "admision",
+contexto: "Hay 5000 solicitudes al año, muchas incompletas.",
+decision: "Evaluar automatización",
+datos: "20% incompletas",
+restricciones: "Evitar sesgos"
+},
+{
+id: "soporte",
+contexto: "Muchos tickets repetidos",
+decision: "Automatizar clasificación",
+datos: "1000 tickets/mes",
+restricciones: "No fallar en críticos"
+}
+];
+
 
 fetch("./data/ejemplos.json")
 .then(response => response.json())
