@@ -3,9 +3,9 @@
 {
 "id": "admision",
 "nombre": "Admisión universitaria",
-"contexto": "Hay 5000 solicitudes al año, muchas incompletas, y poco tiempo para revisarlas.",
+"contexto": "Hay 5000 solicitudes al año, muchas incompletas y poco tiempo para revisarlas.",
 "decision": "Evaluar si automatizar la prevalidación de solicitudes",
-"datos": "20% incompletas, plazo 2 semanas, datos sensibles",
+"datos": "20% incompletas, plazo de 2 semanas, datos sensibles",
 "restricciones": "Evitar sesgos y garantizar revisión humana"
 },
 {
@@ -13,7 +13,7 @@
 "nombre": "Soporte TI",
 "contexto": "Se reciben muchos tickets diarios, algunos repetidos.",
 "decision": "Automatizar clasificación y escalado",
-"datos": "1000 tickets/mes, SLA 24h, 30% repetidos",
+"datos": "1000 tickets al mes, SLA de 24h, 30% repetidos",
 "restricciones": "No fallar en incidentes críticos"
 },
 {
@@ -21,15 +21,15 @@
 "nombre": "E-commerce",
 "contexto": "Muchas devoluciones, algunas fraudulentas.",
 "decision": "Automatizar devoluciones estándar",
-"datos": "500 devoluciones/mes, 10% fraude",
-"restricciones": "No afectar experiencia cliente"
+"datos": "500 devoluciones al mes, 10% fraude",
+"restricciones": "No afectar la experiencia del cliente"
 },
 {
 "id": "documentacion",
 "nombre": "Documentación interna",
 "contexto": "Los empleados no encuentran información interna fácilmente.",
-"decision": "Implementar asistente IA",
-"datos": "200 usuarios, 10 consultas/día",
+"decision": "Implementar asistente de IA",
+"datos": "200 usuarios, 10 consultas al día",
 "restricciones": "Privacidad y coste de uso"
 }
 ]
