@@ -1,1 +1,12 @@
+{
+"casos": [
+{
+"nombre": "Admisión universitaria",
+"contexto": "Muchas solicitudes y poco tiempo",
+"decision": "Automatizar prevalidación",
+"datos": "1000 solicitudes, 20% incompletas",
+"restricciones": "Evitar sesgos"
+}
+]
+}
 
