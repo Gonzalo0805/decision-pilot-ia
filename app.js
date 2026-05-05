@@ -6,7 +6,7 @@ const decision = document.getElementById("decision").value;
 const datos = document.getElementById("datos").value;
 const restricciones = document.getElementById("restricciones").value;
 
-
+```
 if (!contexto || !decision) {
   alert("Rellena al menos contexto y decisión");
   return;
@@ -20,7 +20,7 @@ if (typeof construirPrompt !== "function") {
 const prompt = construirPrompt(caso, contexto, decision, datos, restricciones);
 
 document.getElementById("resultado").textContent = prompt;
-
+```
 
 } catch (error) {
 alert("Error en JS: " + error.message);
@@ -41,13 +41,15 @@ navigator.clipboard.writeText(texto)
 .catch(() => alert("Error al copiar"));
 };
 
+window.onload = function () {
+
 let casosData = [];
 
 fetch("./data/ejemplos.json")
 .then(response => response.json())
 .then(data => {
 casosData = data.casos;
-cargarCaso(); // cargar el primero al iniciar
+cargarCaso(); // carga inicial
 })
 .catch(error => {
 console.error("Error cargando JSON:", error);
@@ -58,15 +60,17 @@ document.getElementById("caso").addEventListener("change", cargarCaso);
 function cargarCaso() {
 const casoSeleccionado = document.getElementById("caso").value;
 
+```
 const caso = casosData.find(c => c.id === casoSeleccionado);
 
 if (caso) {
-document.getElementById("contexto").value = caso.contexto;
-document.getElementById("decision").value = caso.decision;
-document.getElementById("datos").value = caso.datos;
-document.getElementById("restricciones").value = caso.restricciones;
+  document.getElementById("contexto").value = caso.contexto;
+  document.getElementById("decision").value = caso.decision;
+  document.getElementById("datos").value = caso.datos;
+  document.getElementById("restricciones").value = caso.restricciones;
 }
+```
+
 }
 
-
-
+};
