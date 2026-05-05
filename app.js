@@ -1,5 +1,3 @@
-alert("JS cargado");
-
 window.generarPrompt = function () {
 try {
 const caso = document.getElementById("caso").value;
