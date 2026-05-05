@@ -41,4 +41,32 @@ navigator.clipboard.writeText(texto)
 .catch(() => alert("Error al copiar"));
 };
 
+let casosData = [];
+
+fetch("./data/ejemplos.json")
+.then(response => response.json())
+.then(data => {
+casosData = data.casos;
+cargarCaso(); // cargar el primero al iniciar
+})
+.catch(error => {
+console.error("Error cargando JSON:", error);
+});
+
+document.getElementById("caso").addEventListener("change", cargarCaso);
+
+function cargarCaso() {
+const casoSeleccionado = document.getElementById("caso").value;
+
+const caso = casosData.find(c => c.id === casoSeleccionado);
+
+if (caso) {
+document.getElementById("contexto").value = caso.contexto;
+document.getElementById("decision").value = caso.decision;
+document.getElementById("datos").value = caso.datos;
+document.getElementById("restricciones").value = caso.restricciones;
+}
+}
+
+
 
